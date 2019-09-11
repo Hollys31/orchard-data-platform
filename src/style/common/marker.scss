@@ -1,0 +1,270 @@
+@keyframes opac{
+    0%{
+        opacity:1;
+        width:50%;
+        height:50%;
+    }
+    100%{
+        opacity:0;
+        width:120%;
+        height:120%;
+    }
+}
+.m1 {
+    .scatter {
+        &::before {
+            background: rgba(0, 140, 255, .99);
+        }
+        .w1, .w2, .w3 {
+            background: rgba(0, 140, 255, .99);
+        }
+    }
+}
+.m2 {
+    .scatter {
+        &::before {
+            background: rgba(255, 191, 0, .99);
+        }
+        .w1, .w2, .w3 {
+            background: rgba(255, 191, 0, .99);
+        }
+    }
+}
+.m3 {
+    .scatter {
+        &::before {
+            background: rgba(255, 0, 0, .99);
+        }
+        .w1, .w2, .w3 {
+            background: rgba(255, 0, 0, .99);
+        }
+    }
+}
+.m4 {
+    .scatter {
+        &::before {
+            background: rgba(255, 0, 237, .99);
+        }
+        .w1, .w2, .w3 {
+            background: rgba(255, 0, 237, .99);
+        }
+    }
+}
+.m5 {
+    .scatter {
+        &::before {
+            background: rgba(156, 0, 255, .99);
+        }
+        .w1, .w2, .w3 {
+            background: rgba(156, 0, 255, .99);
+        }
+    }
+}
+.cluster-div {
+    &:hover {
+        z-index: 99999999 !important;
+        background-image: none !important;
+        .scatter {
+            opacity: 1;
+        }
+    }
+    .scatter {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+        }
+        >div {
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation-name: opac;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        .w2 {
+            animation-delay: .8s;
+        }
+        .w3 {
+            animation-delay: 1.4s;
+        }
+    }
+}
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: left;
+    &:hover {
+        .map-info {
+            display: block !important;
+        }
+    }
+    .map-info {
+        display: none;
+        position: absolute;
+        left: 50%;
+        width: 130px;
+        margin-left: -75px;
+        padding: 0 10px 5px 10px;
+        border-radius: 5px;
+        color: #ddd;
+        background-color: #1A499A;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -32px;
+            left: 50%;
+            margin-left: -20px;
+            border: 20px solid rgba(0, 0, 0, 0);
+            border-top-color: #1A499A;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -18px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+        }
+        .map-info-tips {
+            font-size: 14px;
+            line-height: 40px;
+            text-align: center;
+        }
+        .map-info-title {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 35px;
+            border-bottom: 1px dashed #aaa;
+        }
+        .map-info-item {
+            padding-left: 20px;
+            font-size: 14px;
+            line-height: 30px;
+            background-repeat: no-repeat;
+            background-position: 0 center;
+            background-size: 15px 15px;
+            cursor: pointer;
+            &:hover {
+                color: #6cebfc;
+                text-decoration: underline;
+            }
+        }
+        .map-info-fm1 {
+            background-image: url('./assets/images//icons/54.png');
+            &:hover {
+                background-image: url('./assets/images//icons/57.png');
+            }
+        }
+        .map-info-fm2 {
+            background-image: url('./assets/images//icons/53.png');
+            &:hover {
+                background-image: url('./assets/images//icons/58.png');
+            }
+        }
+        .map-info-waf {
+            background-image: url('./assets/images//icons/55.png');
+            &:hover {
+                background-image: url('./assets/images//icons/59.png');
+            }
+        }
+        .map-info-Acamera {
+            background-image: url('./assets/images//icons/56.png');
+            &:hover {
+                background-image: url('./assets/images//icons/60.png');
+            }
+        }
+        .map-info-Bcamera {
+            background-image: url('./assets/images//icons/67.png');
+            &:hover {
+                background-image: url('./assets/images//icons/68.png');
+            }
+        }
+        .map-info-AIcamera {
+            background-image: url('./assets/images//icons/69.png');
+            &:hover {
+                background-image: url('./assets/images//icons/70.png');
+            }
+        }
+        .map-info-Ccamera {
+            background-image: url('./assets/images//icons/71.png');
+            &:hover {
+                background-image: url('./assets/images//icons/72.png');
+            }
+        }
+        .map-info-nodevice {
+            font-size: 14px;
+            line-height: 30px;
+            text-align: center;
+            color: #aaa;
+        }
+    }
+}
+.map-info-device {
+    padding: 5px 10px;
+    border-radius: 5px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #1A499A;
+}
+.gm-ui-hover-effect {
+    display: none !important;
+}
+.gm-style-iw-c {
+    padding: 0 !important;
+    background-color: #1A499A !important;
+}
+.gm-style-iw-d {
+    overflow: visible !important;
+}
+.gm-style-iw-t::after {
+    box-shadow: none !important;
+    background-color: #1A499A !important;
+}
+.water-drop {
+    position: absolute;
+    top: -15px;
+    left: 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    color: #ff0a00;
+    background-image: url('assets/images/icons/52.png');
+    background-size: 27px 35px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+.orchard-name {
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    width: 200px;
+    height: 20px;
+    margin-left: -100px;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    text-shadow: 0px -2px 2px #000, 0px 2px 2px #000, -2px 0px 2px #000, 2px 0px 2px #000,;
+}

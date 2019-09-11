@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" href="<%= BASE_URL %>favicon.png">
+        <title>智慧果园大数据综合分析平台</title>
+        <script type="text/javascript" src="/js/markerclusterer.js?v=20190628"></script>
+        <script type="text/javascript" src="/js/ezuikit.js?v=20190622"></script>
+        <script type="text/javascript" src="/js/krpano.js?v=20190725"></script>
+        <script>
+            var HaveActiveX;
+            try {
+                var ax = new ActiveXObject("EZOPENUIACTIVEXK.EzOpenUIActiveXKCtrl.1");
+                bInstall = true;
+                HaveActiveX = true;
+                var script = document.createElement('script')
+                script.src = './js/ezuitalk.js?v=20190707'
+                document.head.appendChild(script)
+            } catch (e) {
+                HaveActiveX = false;
+            }
+            navigator.getUserMedia = navigator.getUserMedia || 
+            navigator.webkitGetUserMedia || 
+            navigator.mozGetUserMedia || 
+            navigator.msGetUserMedia;
+            if(document.location.protocol === 'https:'){
+                window.HOST_TYPE = '2'
+            }
+        </script>
+        <script type="text/javascript" src="//api.map.baidu.com/getscript?v=2.0&ak=4Fl69yGZpaSC9BOGzAjMVHem"></script>
+        <script type="text/javascript" src="//maps.google.cn/maps/api/js?key=AIzaSyBS1p0Z2ibsrbtNsH6Co7ytQgL_ObYfs_E&language=zh-CN"></script>
+  </head>
+  <body>
+        <noscript>
+            <strong>很抱歉，您没有启用JavaScript, 智慧源地大数据综合分析平台无法正常工作。请先启用JavaScript。</strong>
+        </noscript>
+        <div id="app"></div>
+        <!-- built files will be auto injected -->
+        <script language="javascript" for="EZUIKit" event="PluginEventHandler(lEventType, strErrorCode, lInterErrorCode)">   //打开预览时触发该事件
+            PluginEventHandler(lEventType, strErrorCode, lInterErrorCode);
+        </script>
+    </body>
+</html>

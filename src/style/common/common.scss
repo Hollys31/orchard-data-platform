@@ -1,0 +1,146 @@
+//color #4bd8b5 、#ff8080 、#ffd342 、#1981c9
+html, body {
+    height: 100%;
+    //min-width: 1024px;
+    //min-height: 23.4rem;
+    overflow: hidden;
+}
+html, body, ul, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+canvas {
+    display:block;
+}
+//隐藏百度 谷歌地图版权信息
+.anchorBL {
+    display: none !important;
+}
+.gm-style-cc { //谷歌地图版权信息
+    display: none !important;
+}
+[rel = noopener] { //谷歌地图logo
+    display: none !important;
+}
+
+//element-ui 时间选择组件
+.el-picker-panel{
+    margin-right: -40px !important;
+    color: #606266;
+    border: 1px solid #e4e7ed;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    border-radius: 4px;
+    line-height: 30px;
+    background: rgba(#102d56, 1) !important;
+    transform: translate(-29px, -10px) !important;
+    .popper__arrow{
+        transform: translateX(30px);
+    }
+}
+.el-popper[x-placement^=bottom] .popper__arrow::after{
+    display: none !important;
+}
+.el-date-picker__header-label{
+    color: #eee !important;
+}
+.el-date-picker__header{
+    margin-top: 6px !important;
+    margin-bottom: 0px !important;
+}
+.el-picker-panel__content{
+    margin-top: 0px !important;
+}
+.el-picker-panel__icon-btn{
+    color: #aaa !important;
+    &:hover{
+        color: #fff !important;
+    }
+}
+.el-date-table td.available span{
+    color: #fff !important;
+}
+.el-date-table td.next-month, .el-date-table td.prev-month{
+    color: #666 !important;
+}
+.el-picker-panel__content .el-date-table>tbody>tr>th{
+    color: #aaa;
+}
+.el-date-table {
+    width: 100%;
+    tbody {
+        margin: 20px;
+    }
+}
+.el-input__inner{
+    width: 60px;
+    cursor: pointer;
+}
+.el-input__icon {
+    display: none !important;
+}
+.disabled div {
+    background-color: transparent !important;
+}
+
+.psv-navbar {
+    opacity: 0;
+    animation: navbar-out 3s;
+    transition: opacity 1s;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+//video.js
+.video-js {
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    video {
+        object-fit: fill;
+    }
+}
+.vjs-poster {
+    background-size: 100% 100% !important;
+}
+
+
+#krpano {
+    width: 100%;
+    height: 100%;
+    center {
+        >i {
+            display: none !important;
+        }
+    }
+}
+
+::-webkit-input-placeholder {
+    color: #ccc !important;
+}
+:-moz-placeholder {/* Firefox 18- */
+    color: #ccc !important;
+}
+::-moz-placeholder{/* Firefox 19+ */
+   color: #ccc !important;
+}
+:-ms-input-placeholder {
+    color: #ccc !important;
+}
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px white inset;
+}
+@keyframes navbar-out {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

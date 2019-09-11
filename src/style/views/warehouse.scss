@@ -1,0 +1,36 @@
+.warehouse {
+    .wrap {
+        &:nth-child(1) {
+            width: calc(50% - 10px);
+            margin-right: 10px;
+        }
+        &:nth-child(2) {
+            width: 50%;
+            .panel {
+                width: calc(50% - 7px);
+                &:nth-child(1) {
+                    width: calc(100% - 2px);
+                    height: calc(30% - 12px);
+                    margin-bottom: 10px;
+                }
+                &:nth-child(2) {
+                    height: calc(35% - 7px);
+                    margin-bottom: 10px;
+                }
+                &:nth-child(3) {
+                    height: calc(35% - 7px);
+                    margin-bottom: 10px;
+                }
+                &:nth-child(4) {
+                    height: calc(35% - 7px);
+                }
+                &:nth-child(5) {
+                    height: calc(35% - 7px);
+                }
+                &:nth-child(even) {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

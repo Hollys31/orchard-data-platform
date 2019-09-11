@@ -1,0 +1,146 @@
+@media screen and (max-width: 1366px){
+    .total-data {
+        padding: 10px 10px 20px 10px;
+        width: calc(100% - 20px);
+        >div {
+            >div {
+                width: 23%;
+                height: 80px;
+                line-height: 80px;
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    white-space: nowrap;
+                    font-size: 16px;
+                    line-height: 30px;
+                    >span {
+                        font-size: 18px;
+                        >span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .corner {
+            >i {
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                &:nth-child(1) {
+                    top: 0;
+                    left: 0;
+                }
+                &:nth-child(2) {
+                    top: 0;
+                    right: 0;
+                }
+                &:nth-child(3) {
+                    bottom: 12px;
+                    left: 0;
+                }
+                &:nth-child(4) {
+                    bottom: 12px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1367px){
+    .total-data {
+        padding: 10px 40px 30px 40px;
+        width: calc(100% - 80px);
+        height: 120px;
+        >div {
+            >div {
+                width: 22%;
+                height: 120px;
+                line-height: 120px;
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    white-space: nowrap;
+                    font-size: 20px;
+                    line-height: 40px;
+                    >span {
+                        font-size: 26px;
+                        >span {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .corner {
+            >i {
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                &:nth-child(1) {
+                    top: 0;
+                    left: 30px;
+                }
+                &:nth-child(2) {
+                    top: 0;
+                    right: 30px;
+                }
+                &:nth-child(3) {
+                    bottom: 20px;
+                    left: 30px;
+                }
+                &:nth-child(4) {
+                    bottom: 20px;
+                    right: 30px;
+                }
+            }
+        }
+    }
+}
+.total-data {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    >div {
+        display: flex;
+        justify-content: space-between;
+        >div {
+            position: relative;
+            background-image: url('../../assets/images/total_bg.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: 100% 100%;
+            text-align: center;
+            >span {
+                color: #fff;
+                line-height: 25px;
+            }
+        }
+    }
+    .corner {
+        >i {
+            position: absolute;
+            border: 2px solid rgba(31, 29, 29, 0);
+            &:nth-child(1) {
+                border-left-color: #1399c5;
+                border-top-color: #1399c5;
+                border-radius: 8px 0 0 0;
+            }
+            &:nth-child(2) {
+                border-right-color: #1399c5;
+                border-top-color: #1399c5;
+                border-radius: 0 8px 0 0;
+            }
+            &:nth-child(3) {
+                border-left-color: #1399c5;
+                border-bottom-color: #1399c5;
+                border-radius: 0 0 0 8px;
+            }
+            &:nth-child(4) {
+                border-right-color: #1399c5;
+                border-bottom-color: #1399c5;
+                border-radius: 0 0 8px 0;
+            }
+        }
+    }
+}

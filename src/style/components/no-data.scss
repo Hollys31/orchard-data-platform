@@ -1,0 +1,33 @@
+.no-data {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 100%;
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    color: rgba($color: #fff, $alpha: 0.2);
+    user-select: none;
+    //background-color: #051a3b;
+    border-radius: 8px;
+    z-index: 1;
+    .no-data-text {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -2rem;
+        width: 100%;
+        height: 0.5rem;
+        padding-top: 3.5rem;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 5rem 3.5rem;
+        background-image: url('../assets/images/icons/65.png');
+        text-align: center;
+    }
+}

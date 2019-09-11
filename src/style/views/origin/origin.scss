@@ -1,0 +1,25 @@
+.origin {
+    .wrap {
+        &:nth-child(1) {
+            width: calc(50% - 10px);
+            margin-right: 10px;
+            background-color: transparent !important;
+        }
+        &:nth-child(2) {
+            width: 50%;
+            .panel {
+                width: calc(50% - 7px);
+                height: calc(34% - 7px);
+                margin-bottom: 10px;
+                &:nth-child(1) {
+                    margin-right: 10px;
+                }
+            }
+            .address-list {
+                position: relative;
+                width: 100%;
+                height: calc(66% - 7px);
+            }
+        }
+    }
+}

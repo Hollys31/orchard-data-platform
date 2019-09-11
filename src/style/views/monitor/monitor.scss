@@ -1,0 +1,50 @@
+.monitor {
+    .wrap {
+        &:nth-child(1) {
+            width: calc(25% - 5px);
+            margin-right: 10px;
+            .orchard-info {
+                width: 100%;
+                height: calc(34% - 10px);
+                margin-bottom: 10px;
+            }
+            .device-statistics {
+                width: 100%;
+                height: 66%;
+            }
+        }
+        &:nth-child(2) {
+            position: relative;
+            width: calc(50% - 10px);
+            margin-right: 10px;
+            background-color: transparent !important;
+            .search {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                z-index: 1;
+            }
+            .gmap {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        &:nth-child(3) {
+            width: calc(25% - 5px);
+            .panel {
+                width: calc(100% - 2px);
+                &:nth-child(1) {
+                    height: calc(34% - 12px);
+                    margin-bottom: 10px;
+                }
+                &:nth-child(2) {
+                    height: calc(33% - 7px);
+                    margin-bottom: 10px;
+                }
+                &:nth-child(3) {
+                    height: calc(33% - 7px);
+                }
+            }
+        }
+    }
+}

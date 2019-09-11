@@ -1,0 +1,106 @@
+@media screen and (max-width: 1366px){
+    .total-data {
+        width: 90%;
+        height: 80%;
+        padding: 2% 5%;
+        >div{
+            width: 35%;
+            height: 30%;
+            padding: 6px 0 6px 30px;
+            font-size: 12px;
+            >span {
+                font-size: 14px;
+            }
+            >i {
+                background-position: 5px center;
+                background-size: 30px 30px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1367px){
+    .total-data {
+        width: 80%;
+        height: 80%;
+        padding: 5% 10%;
+        >div{
+            width: 30%;
+            height: 25%;
+            padding: 13px 0 13px 50px;
+            font-size: 16px;
+            >span {
+                font-size: 18px;
+            }
+            >i {
+                background-position: 0px center;
+                background-size: 64px 64px;
+            }
+        }
+    }
+}
+.total-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    >div {
+        position: relative;
+        text-align: center;
+        >span {
+            color: #4bd8b5;
+        }
+        >i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border: 1px solid rgba(0, 0, 0, 0);
+            }
+        }
+        .provinces {
+            background-image: url('../../assets/images/icons/102.png');
+            &::before {
+                top: 0;
+                left: -10px;
+                border-left-color: #0eb4ef;
+                border-top-color: #0eb4ef;
+            }
+        }
+        .number {
+            background-image: url('../../assets/images/icons/101.png');
+            &::before {
+                top: 0;
+                right: 0;
+                border-right-color: #0eb4ef;
+                border-top-color: #0eb4ef;
+                background-position: 0 center;
+            }
+        }
+        .orchard {
+            background-image: url('../../assets/images/icons/100.png');
+            &::before {
+                bottom: 0;
+                left: -10px;
+                border-left-color: #0eb4ef;
+                border-bottom-color: #0eb4ef;
+            }
+        }
+        .area {
+            background-image: url('../../assets/images/icons/99.png');
+            &::before {
+                bottom: 0;
+                right: 0;
+                border-right-color: #0eb4ef;
+                border-bottom-color: #0eb4ef;
+                background-position: 0 center;
+            }
+        }
+    }
+}

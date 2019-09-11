@@ -1,0 +1,45 @@
+.plant {
+    .wrap {
+        &:nth-child(1) {
+            width: calc(50% - 10px);
+            margin-right: 10px;
+            background-color: transparent !important;
+        }
+        &:nth-child(2) {
+            width: calc(25% - 5px);
+            margin-right: 10px;
+            .panel {
+                width: calc(100% - 2px);
+                &:nth-child(1) {
+                    height: calc(34% - 12px);
+                    margin-bottom: 10px;
+                }
+                &:nth-child(2) {
+                    height: calc(34% - 12px);
+                    margin-bottom: 10px;
+                }
+                &:nth-child(3) {
+                    height: calc(32% - 2px);
+                }
+            }
+        }
+        &:nth-child(3) {
+            width: calc(25% - 5px);
+            .panel {
+                width: calc(100% - 2px);
+                &:nth-child(1) {
+                    height: calc(68% - 12px);
+                    margin-bottom: 10px;
+                } 
+                &:nth-child(2) {
+                    height: calc(32% - 2px);
+                }
+            }
+        }
+    }
+}
+.chart-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,384 @@
+@media screen and (max-width: 1366px){
+    .camera {
+        .video {
+            width: calc(100% - 20px);
+            height: calc(100% - 40px);
+            margin: 0 10px;
+        }
+        .full {
+            top: 110px;
+        }
+        .cut {
+            >div {
+                line-height: 30px;
+            }
+            .cut-left {
+                left: 10px;
+            }
+            .cut-right {
+                right: 10px;
+            }
+        }
+        .device-wrap {
+            width: calc(100% - 60px);
+            height: 30px;
+            margin: 0 30px;
+            .device-list {
+                font-size: 14px;
+                >li {
+                    width: 50px;
+                    height: 30px;
+                    padding-left: 30px;
+                    margin-right: 20px;
+                    line-height: 30px;
+                    background-size: 20px 20px;
+                    background-position: 5px 3px; 
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1367px){
+    .camera {
+        .video {
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            margin: 0 20px;
+        }
+        .full {
+            top: 110px;
+        }
+        .cut {
+            >div {
+                line-height: 30px;
+            }
+            .cut-left {
+                left: 20px;
+            }
+            .cut-right {
+                right: 20px;
+            }
+        }
+        .device-wrap {
+            width: calc(100% - 80px);
+            height: 30px;
+            margin: 0 40px;
+            .device-list {
+                font-size: 14px;
+                >li {
+                    width: 50px;
+                    height: 30px;
+                    padding-left: 30px;
+                    margin-right: 20px;
+                    line-height: 30px;
+                    background-size: 20px 20px;
+                    background-position: 5px 3px; 
+                }
+            }
+        }
+    }
+}
+
+@keyframes warn {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes warn1 {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.camera {
+    width: 100%;
+    height: 100%;
+    .video {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: warn 1s ease-out;
+        border-radius: 8px;
+        overflow: hidden;
+        z-index: 21;
+        .controls {
+            position: absolute;
+            //top: 50%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+            .play-button {
+                width: 46px;
+                height: 46px;
+                background-image: url('../../assets/images/icons/17.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 46px 46px;
+                cursor: pointer;
+            }
+            .pause-button {
+                width: 46px;
+                height: 46px;
+                font-size: 46px;
+                line-height: 46px;
+                text-align: center;
+                cursor: pointer;
+                animation: pause-out 5s;
+                transition: all 1s;
+                color: rgba(0, 0, 0, 0);
+                text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0);
+                &:hover {
+                    color: #fff;
+                    text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 1);
+                }
+            }
+        }
+        .zoom {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 1);
+            cursor: pointer;
+            z-index: 21;
+        }
+        .panorama {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            //top: 50%;
+            top: 0;
+            margin-left: auto;
+            left: 0;
+            z-index: 21;
+            background-image: url('../../assets/images/loading.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40px 40px;
+        }
+        .video-flash, .video-html5, .video-live {
+            position: absolute;
+            //top: 50%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            left: 0;
+            overflow: hidden;
+            #my-flash{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .video-live {
+            .live-control {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 30px;
+                background: rgba(0, 0, 0, 1);
+                .live-zoom, .live-play, .live-talk, .live-tips {
+                    position: absolute;
+                    top: 0;
+                    width: 30px;
+                    height: 30px;
+                    font-size: 20px;
+                    line-height: 30px;
+                    text-align: center;
+                    cursor: pointer;
+                    z-index: 21;
+                }
+                .live-zoom {
+                    right: 10px;
+                }
+                .live-play {
+                    left: 10px;
+                }
+                .live-talk {
+                    left: 40px;
+                }
+                .live-tips {
+                    width: calc(100% - 110px);
+                    left: 70px;
+                    font-size: 12px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+        .not-playing {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+    .full {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 18px;
+        width: auto;
+        height: auto;
+        background-color: #2f5671;
+        animation: warn1 1s ease-out;
+        &:hover {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.99);
+        }
+        .controls {
+            .play-button {
+                width: 110px;
+                height: 110px;
+                background: url('../../assets/images/icons/18.png') no-repeat center;
+            }
+            .pause-button {
+                width: 110px;
+                height: 110px;
+                font-size: 86px;
+                line-height: 110px;
+            }
+        }
+        .zoom {
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+    .cut {
+        >div {
+            position: absolute;
+            top: 0;
+            color: #55c0d9;
+            cursor: pointer;
+        }
+    }
+    .device-wrap {
+        position: relative;
+        overflow: hidden;
+        .device-list {
+            position: absolute;
+            list-style: none;
+            display: flex;
+            transition: all 0.5s ease-out;
+            >li {
+                position: relative;
+                white-space: nowrap;
+                border-radius: 6px;
+                transition: all 0.3s ease-out;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .A {
+                background-image: url('../../assets/images/icons/15.png');
+            }
+            .B {
+                background-image: url('../../assets/images/icons/67.png');
+            }
+            .AI {
+                background-image: url('../../assets/images/icons/69.png');
+            }
+            .C {
+                background-image: url('../../assets/images/icons/71.png');
+            }
+            .A-checked {
+                background-image: url('../../assets/images/icons/45.png');
+                color: #6cebfc;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 6px;
+                    z-index: -1;
+                }
+            }
+            .B-checked {
+                background-image: url('../../assets/images/icons/68.png');
+                color: #6cebfc;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 6px;
+                    z-index: -1;
+                }
+            }
+            .AI-checked {
+                background-image: url('../../assets/images/icons/70.png');
+                color: #6cebfc;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 6px;
+                    z-index: -1;
+                }
+            }
+            .C-checked {
+                background-image: url('../../assets/images/icons/72.png');
+                color: #6cebfc;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 6px;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+@keyframes pause-out {
+    0% {
+        opacity: 1;
+        color: #fff;
+        text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 1);
+    }
+    80% {
+        opacity: 1;
+        color: #fff;
+        text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 1);
+    }
+    100% {
+        opacity: 0;
+        text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0);
+    }
+}

@@ -1,0 +1,54 @@
+@import 'common.scss';
+@import 'icon.scss';
+@import 'marker.scss';
+#app {
+    display: flex;
+    flex-flow: wrap;
+    height: 100%;
+    font-family: "Microsoft YaHei", "Helvetica Neue", "Hiragino Sans GB", "Helvetica", "PingFang SC", "\5FAE\8F6F\96C5\9ED1", "Arial", "sans-serif";
+    .bg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        //min-width: 1024px;
+        height: 100%;
+        background-image: url('./assets/images/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        z-index: -1;
+    }
+    .main {
+        display: flex;
+        flex-flow: wrap;
+        padding: 10px 20px 20px 20px;
+        width: calc(100% - 40px);
+        color: #fff;
+        font-size: 14px;
+        overflow: hidden;
+        .wrap {
+            display: flex;
+            flex-flow: wrap;
+            height: 100%;
+        }
+    }
+}
+/*
+@media screen and (max-width: 1365px){
+    #app {
+        .main {
+            padding: 5px 10px 10px 10px;
+            width: calc(100% - 20px);
+            height: calc(100% - 115px);
+        }
+    }
+}
+@media screen and (min-width: 1366px){
+    #app {
+        .main {
+            padding: 10px 20px 20px 20px;
+            width: calc(100% - 40px);
+            height: calc(100% - 130px);
+        }
+    }
+}
+*/

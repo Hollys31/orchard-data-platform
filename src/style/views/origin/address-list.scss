@@ -1,0 +1,159 @@
+@media screen and (max-width: 1366px){
+    .address-list {
+        font-size: 12px;
+        .el-date-editor{
+            right: 20px;
+            width: 30px;
+            height: 30px;
+        }
+        .iconfont {
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .plane-content{
+            .item-title{
+                font-size: 16px;
+            }
+            .sub-item{
+                padding: 5px 20px;
+                >div{
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1367px){
+    .address-list {
+        font-size: 14px;
+        .el-date-editor{
+            right: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        .iconfont {
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+            line-height: 40px;
+        }
+        .plane-content{
+            .item-title{
+                font-size: 18px;
+            }
+            .sub-item{
+                padding: 5px 40px;
+                >div{
+                    margin-right: 40px;
+                }
+            }
+        }
+    }
+}
+.address-list {
+    .el-date-editor{
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        z-index: 2;
+        opacity: 0;
+        
+    }
+    .iconfont {
+        position: absolute;
+        top: 0;
+        font-family: 'iconfont';
+        text-align: center;
+        user-select: none;
+        color: #02b9e1;
+        z-index: 1;
+    }
+    .plane-content{
+        position: absolute;
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+        top: 0;
+        left: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+        .list-container{
+            overflow: hidden;
+            position: absolute;
+            width: calc(100% - 48px);
+            // border: 1px solid #f00;
+            padding-left: 38px;
+            padding-right: 10px;
+            list-style: none;
+            &:before{
+                position: absolute;
+                content: "";
+                display: block;
+                background: rgba(#2e73d7, 0.2);
+                width: 8px;
+                top: 5px;
+                bottom: 5px;
+                left: 15px;
+                border-radius: 8px;
+            }
+            >li{
+                color: #fff;
+                position: relative;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                    top: 7px;
+                    left: -36px;
+                    background: url('../../assets/images/icons/66.png');
+                    background-size: 32px 32px;
+                }
+            }
+        }
+        .item-title{
+            font-weight: bold;
+            line-height: 50px;
+            letter-spacing: 2px;
+        }
+        .sub-item{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            line-height: 20px;
+            background: #0e4076;
+            border-radius: 8px;
+            transition: all 0.3s ease-out;
+            color: #eee;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            >div{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                &:nth-of-type(5){
+                    flex: 1;
+                }
+                &:nth-of-type(7){
+                    margin-right: 20px;
+                }
+                &:nth-of-type(8){
+                    margin-right: 0;
+                }
+            }
+            &:hover{
+                background: rgba(#063f60, 0.8);
+                //font-size: 16px;
+                font-weight: bold;
+                color: #fff;
+                transform: scale(1.02, 1.02);
+            }
+        }
+    }
+}
